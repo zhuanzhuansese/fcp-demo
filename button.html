@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Force based label placement</title>
+		<script type="text/javascript" src="/Users/xiaozhuanzhang/Downloads/d3/d3.js"></script>
+		<script type="text/javascript" src="/Users/xiaozhuanzhang/Downloads/d3/d3.min.js"></script>
+	</head>
+	<body>
+<script type="text/javascript" charset="utf-8">
+            var url=window.location.href
+            if (url.indexOf("?")>=0){
+            	url_refresh=url;
+            }
+            else{
+            	url_refresh=url+"?refresh=True"
+            }
+
+
+			var w = 4800, h = 2500;
+			var vis = d3.select("body").append("svg:svg").attr("width", w).attr("height", h);
+			var button=vis.append("svg").attr("height",300).attr("width",300);
+                button.append("rect").attr("x",100).attr("y",100).attr("rx",10).attr("ry",10).attr("class","button").attr("height",100).attr("width",200).style("fill","gray").style("border-radius","10px");           
+                button.append("a").attr("xlink:href",url_refresh).append("rect").attr("x",100).attr("y",100).attr("rx",10).attr("ry",10).attr("class","button").attr("height",100).attr("width",200).style("fill","gray").style("border-radius","10px")//.attr("cursor","pointer");
+                button.append("a").attr("xlink:href",url_refresh).append("text").attr("x",100).attr("y",100).attr("dx",100).attr("dy",60).text("button").style("fill","black").style("font-size","50px").style("text-anchor","middle");
+		</script>
+	</body>
+</html>
